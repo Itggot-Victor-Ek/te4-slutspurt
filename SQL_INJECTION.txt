@@ -1,0 +1,2 @@
+Please dont type this into the comment, it does strange things. :)
+yee'); DROP TABLE posts; --

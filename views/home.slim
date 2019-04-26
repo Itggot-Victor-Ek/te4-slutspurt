@@ -1,0 +1,19 @@
+h1 Hi and welcome to this incredible webiste
+span
+  p Here you can post and comment what you want, please avoid doing any kind of
+a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" cross site scripting
+p and
+a href="https://en.wikipedia.org/wiki/SQL_injection" SQL injection
+p as that would be bad. Thank you!
+
+form action="/post" method="post"
+  input type="text" name="post" placeholder="Your text"
+  button type="submit" Submit
+
+
+- @data.each do |post|
+  .posts
+    h2 Anonymous
+    ==post[:comment]
+
+
