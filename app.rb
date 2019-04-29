@@ -5,7 +5,8 @@ class App < Sinatra::Base
   end
 
   post '/post' do
-    db.run "INSERT INTO posts (comment) VALUES('#{params['post']}');"
+    insert_ds = db['INSERT INTO posts (comment) VALUES(?);', params['post']]
+    insert_ds.insert
     redirect '/'
   end
 
